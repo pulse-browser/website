@@ -39,7 +39,7 @@ const Downloads: NextPage = () => {
             ) : releases.alpha ? (
               <>
                 {releases.alpha.binaries.map((release) => (
-                  <Button href={release.url} key={release.id} type='toned-secondary'>
+                  <Button href={release.url} key={release.id} type='toned-secondary' className='block mb-1'>
                     <i className="bi bi-download"></i> {release.name}
                   </Button>
                 ))}
@@ -64,7 +64,7 @@ const Downloads: NextPage = () => {
             ) : releases.beta ? (
               <>
                 {releases.beta.binaries.map((release) => (
-                  <Button href={release.url} key={release.id} type='toned-secondary'>
+                  <Button href={release.url} key={release.id} type='toned-secondary' className='block mb-1'>
                     <i className="bi bi-download"></i> {release.name}
                   </Button>
                 ))}
@@ -89,7 +89,7 @@ const Downloads: NextPage = () => {
             ) : releases.stable ? (
               <>
                 {releases.stable.binaries.map((release) => (
-                  <Button href={release.url} key={release.id} type='toned-secondary'>
+                  <Button href={release.url} key={release.id} type='toned-secondary' className='block mb-1'>
                     <i className="bi bi-download"></i> {release.name}
                   </Button>
                 ))}
