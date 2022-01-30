@@ -18,6 +18,11 @@ const Downloads: NextPage = () => {
           content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools."
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://pulsebrowser.app/download" />
+
+        <meta property="og:title" content="Focus Browser - Download" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/promotional-embed.png" />
       </Head>
 
       <Nav />
