@@ -8,17 +8,23 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Focus Browser</title>
-        <meta name="description" content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools." />
+        <title>Pulse Browser</title>
+        <meta
+          name="description"
+          content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools."
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://pulsebrowser.app/" />
 
-        <meta property="og:title" content="Focus Browser - An Experimental Firefox Fork" />
+        <meta
+          property="og:title"
+          content="Pulse Browser - An Experimental Firefox Fork"
+        />
         <meta
           property="og:description"
           content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools."
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:image" content="/assets/promotional-embed.png" />
       </Head>
 
@@ -34,7 +40,9 @@ const Home: NextPage = () => {
             </div>
             <div className="flex-shrink">
               <h1 className="font-bold text-xl pb-2">Removed telemetry</h1>
-              <p>Noone but you should know what you are doing in your browser.</p>
+              <p>
+                Noone but you should know what you are doing in your browser.
+              </p>
             </div>
           </div>
           <div className="p-8 flex items-center">
@@ -43,7 +51,10 @@ const Home: NextPage = () => {
             </div>
             <div className="flex-shrink">
               <h1 className="font-bold text-xl pb-2">Goodbye spyware</h1>
-              <p>uBlock Origin, a wide spectrum blocker is included right inside of the browser, blocking spyware on website</p>
+              <p>
+                uBlock Origin, a wide spectrum blocker is included right inside
+                of the browser, blocking spyware on website
+              </p>
             </div>
           </div>
           <div className="p-8 flex items-center">
@@ -52,7 +63,10 @@ const Home: NextPage = () => {
             </div>
             <div className="flex-shrink">
               <h1 className="font-bold text-xl pb-2">Hello customisability</h1>
-              <p>Customise your interface with full browser themes, making it just right for you</p>
+              <p>
+                Customise your interface with full browser themes, making it
+                just right for you
+              </p>
             </div>
           </div>
           <div className="p-8 flex items-center">
@@ -61,7 +75,10 @@ const Home: NextPage = () => {
             </div>
             <div className="flex-shrink">
               <h1 className="font-bold text-xl pb-2">Sidebars</h1>
-              <p>To get quick access to all your tools right at the side of the browser</p>
+              <p>
+                To get quick access to all your tools right at the side of the
+                browser
+              </p>
             </div>
           </div>
           <div className="p-8 flex items-center">
@@ -87,7 +104,10 @@ const Home: NextPage = () => {
 
       <div id="themes" className="container text-center m-auto p-32">
         <h2 className="font-bold text-4xl mb-8">Themes</h2>
-        <p className="text-lg font-normal">Pulse Browser supports theming via addons to let users freely modify the browser UI to their needs and liking.</p>
+        <p className="text-lg font-normal">
+          Pulse Browser supports theming via addons to let users freely modify
+          the browser UI to their needs and liking.
+        </p>
         <p className="font-bold">We all love personalization. 🎨</p>
       </div>
 
@@ -102,7 +122,10 @@ const Home: NextPage = () => {
             </div>
             <div className="flex-shrink">
               <h1 className="font-bold text-xl pb-2">Minimalist UI</h1>
-              <p>Minimalist ui that feels more native than firefox's (custom skin, not a rewrite)</p>
+              <p>
+                Minimalist ui that feels more native than firefox's (custom
+                skin, not a rewrite)
+              </p>
             </div>
           </div>
 
@@ -111,8 +134,13 @@ const Home: NextPage = () => {
               <h1 className="text-4xl pr-4">🤔</h1>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Open-Source Alternatives</h1>
-              <p>Replace some internal firefox components with better open source alternatives (e.g. uBlock origin)</p>
+              <h1 className="font-bold text-xl pb-2">
+                Open-Source Alternatives
+              </h1>
+              <p>
+                Replace some internal firefox components with better open source
+                alternatives (e.g. uBlock origin)
+              </p>
             </div>
           </div>
 
