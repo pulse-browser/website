@@ -1,13 +1,13 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import { Nav, Button, Footer } from "../components";
-import { useReleases } from "../data/releases";
+import { Nav, Button, Footer } from '../components'
+import { useReleases } from '../data/releases'
 
 const Downloads: NextPage = () => {
-  const releases = useReleases();
-  console.log(releases);
+  const releases = useReleases()
+  console.log(releases)
 
   return (
     <div className="container m-auto">
@@ -34,18 +34,24 @@ const Downloads: NextPage = () => {
       <div className="p-4">
         <h1 className="text-4xl font-bold m-2">Downloads</h1>
 
-        <div className="bg-gray-100 flex p-4 m-4 justify-between">
-          <div>
-            <h2 className="text-1xl font-bold">Alpha builds</h2>
-            <div className="text-gray-700 mt-4">
-              Get the latest features at the with less stability and polish
-            </div>
+        <div className="bg-gray-100 flex p-4 m-4 justify-between outline outline-offset-2 outline-gray-600">
+          <div className="inline-flex">
+            <img
+              src="https://raw.githubusercontent.com/pulse-browser/assets/main/alpha/pulse-alpha.png"
+              className="w-32 h-32"
+            />
             <div>
-              Released on:{" "}
-              {releases.alpha?.releaseDate.toLocaleDateString() || "none"}
+              <h2 className="text-1xl font-bold">Alpha builds</h2>
+              <div className="text-gray-700 mt-4">
+                Get the latest features at the with less stability and polish
+              </div>
+              <div>
+                Released on:{' '}
+                {releases.alpha?.releaseDate.toLocaleDateString() || 'none'}
+              </div>
             </div>
           </div>
-          <div>
+          <div className="">
             {releases.alphaLoading ? (
               <p>Loading...</p>
             ) : releases.alpha ? (
@@ -68,15 +74,21 @@ const Downloads: NextPage = () => {
         </div>
 
         <div className="bg-gray-100 flex p-4 m-4 justify-between">
-          <div>
-            <h2 className="text-1xl font-bold">Beta builds</h2>
-            <div className="text-gray-700 mt-4">
-              Get slightly more stable and pollished builds but still with a
-              risk of crashes
-            </div>
+          <div className="inline-flex">
+            <img
+              src="https://raw.githubusercontent.com/pulse-browser/assets/main/beta/pulse-beta.png"
+              className="w-32 h-32"
+            />
             <div>
-              Released on:{" "}
-              {releases.beta?.releaseDate.toLocaleDateString() || "none"}
+              <h2 className="text-1xl font-bold">Beta builds</h2>
+              <div className="text-gray-700 mt-4">
+                Get slightly more stable and pollished builds but still with a
+                risk of crashes
+              </div>
+              <div>
+                Released on:{' '}
+                {releases.beta?.releaseDate.toLocaleDateString() || 'none'}
+              </div>
             </div>
           </div>
           <div>
@@ -102,14 +114,20 @@ const Downloads: NextPage = () => {
         </div>
 
         <div className="bg-gray-100 flex p-4 m-4 justify-between">
-          <div>
-            <h2 className="text-1xl font-bold">Stable builds</h2>
-            <div className="text-gray-700 mt-4">
-              Stable builds with more features than firefox
-            </div>
+          <div className="inline-flex">
+            <img
+              src="https://raw.githubusercontent.com/pulse-browser/assets/main/stable/pulse-stable.png"
+              className="w-32 h-32"
+            />
             <div>
-              Released on:{" "}
-              {releases.stable?.releaseDate.toLocaleDateString() || "none"}
+              <h2 className="text-1xl font-bold">Stable builds</h2>
+              <div className="text-gray-700 mt-4">
+                Stable builds with more features than firefox
+              </div>
+              <div>
+                Released on:{' '}
+                {releases.stable?.releaseDate.toLocaleDateString() || 'none'}
+              </div>
             </div>
           </div>
           <div>
@@ -137,7 +155,7 @@ const Downloads: NextPage = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Downloads;
+export default Downloads
