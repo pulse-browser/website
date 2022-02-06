@@ -24,7 +24,7 @@ const InternalButton: FC<{ type: ButtonType; className?: string }> = ({
         : ''
     } ${
       type == 'text'
-        ? 'border-gray-100 text-gray-700 dark:text-white px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-200'
+        ? 'border-gray-100 text-gray-700 px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-200'
         : ''
     } ${
       type == 'download'
