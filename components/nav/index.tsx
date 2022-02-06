@@ -4,7 +4,7 @@ import { Button } from '..'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export const Nav = () => (
-  <nav className="p-8 flex place-content-center flow-root">
+  <nav className="p-8 place-content-center flow-root">
     <div className="float-left">
       <Link href="/">
         <img
