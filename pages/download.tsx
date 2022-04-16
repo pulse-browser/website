@@ -27,6 +27,8 @@ const Downloads: NextPage = () => {
         />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="/assets/promotional-embed.png" />
+        
+        <script defer data-domain="pulsebrowser.app" src="https://analytics.fyralabs.com/js/plausible.js"></script>
       </Head>
 
       <Nav />
