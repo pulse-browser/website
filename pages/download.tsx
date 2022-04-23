@@ -3,6 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import { Nav, Button, Footer } from '../components'
 import { Releases, releases } from '../data/releases'
+import { HeaderContent } from '../comonents/header'
 
 export async function getServerSideProps() {
   return {
@@ -21,8 +22,6 @@ const Downloads = ({ releases }: { releases: Releases }) => {
           name="description"
           content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools."
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://pulsebrowser.app/download" />
 
         <meta property="og:title" content="Pulse Browser - Download" />
         <meta
@@ -32,11 +31,7 @@ const Downloads = ({ releases }: { releases: Releases }) => {
         <meta property="og:type" content="article" />
         <meta property="og:image" content="/assets/promotional-embed.png" />
 
-        <script
-          defer
-          data-domain="pulsebrowser.app"
-          src="https://analytics.fyralabs.com/js/plausible.js"
-        ></script>
+        <HeaderContent path="downloads" />
       </Head>
 
       <Nav />

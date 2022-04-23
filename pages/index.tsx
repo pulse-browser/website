@@ -1,8 +1,9 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import { Hero, Footer } from "../components";
+import { Hero, Footer } from '../components'
+import { HeaderContent } from '../comonents/header'
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +14,6 @@ const Home: NextPage = () => {
           name="description"
           content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools."
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://pulsebrowser.app/" />
 
         <meta
           property="og:title"
@@ -26,8 +25,8 @@ const Home: NextPage = () => {
         />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="/assets/promotional-embed.png" />
-        
-        <script defer data-domain="pulsebrowser.app" src="https://analytics.fyralabs.com/js/plausible.js"></script>
+
+        <HeaderContent path="" />
       </Head>
 
       <Hero />
@@ -163,7 +162,7 @@ const Home: NextPage = () => {
       <Footer />
       <script>feather.replace()</script>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
