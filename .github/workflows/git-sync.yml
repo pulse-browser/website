@@ -11,3 +11,4 @@ jobs:
           source_branch: 'main'
           destination_repo: 'trickypr/pulse-website'
           destination_branch: 'main'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
