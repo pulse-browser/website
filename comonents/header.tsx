@@ -6,7 +6,7 @@ export const HeaderContent = ({ path }: { path: string }) => (
     <script
       defer
       data-domain="pulsebrowser.app"
-      src="https://pulsebrowser.app/pa/js/script.js"
+      src="https://pa-pulse-browser.trickypr.workers.dev/js/script.js"
     ></script>
   </>
 )
