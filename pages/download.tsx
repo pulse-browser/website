@@ -62,6 +62,8 @@ const Downloads = ({ releases }: { releases: Releases }) => {
                     key={release.id}
                     type="toned-secondary"
                     className="block mb-1"
+                    pingName="Download"
+                    pingProps={{ file: release.name, branch: 'alpha' }}
                   >
                     <i className="bi bi-download"></i> {release.name}
                   </Button>
@@ -97,6 +99,8 @@ const Downloads = ({ releases }: { releases: Releases }) => {
                     key={release.id}
                     type="toned-secondary"
                     className="block mb-1"
+                    pingName="Download"
+                    pingProps={{ file: release.name, branch: 'beta' }}
                   >
                     <i className="bi bi-download"></i> {release.name}
                   </Button>
@@ -131,6 +135,8 @@ const Downloads = ({ releases }: { releases: Releases }) => {
                     key={release.id}
                     type="toned-secondary"
                     className="block mb-1"
+                    pingName="Download"
+                    pingProps={{ file: release.name, branch: 'stable' }}
                   >
                     <i className="bi bi-download"></i> {release.name}
                   </Button>

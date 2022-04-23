@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, MouseEventHandler } from 'react'
+import { ping } from '../../data/ping'
 
 type ButtonType =
   | 'primary'
@@ -8,12 +9,13 @@ type ButtonType =
   | 'download'
   | 'large-text'
 
-const InternalButton: FC<{ type: ButtonType; className?: string }> = ({
-  children,
-  type,
-  className,
-}) => (
+const InternalButton: FC<{
+  type: ButtonType
+  className?: string
+  onClick?: MouseEventHandler<HTMLButtonElement>
+}> = ({ children, type, className, onClick }) => (
   <button
+    onClick={onClick}
     className={`${
       type == 'primary'
         ? 'bg-blue-600 transition duration-500 hover:bg-blue-800 text-white'
@@ -44,16 +46,33 @@ export const Button: FC<{
   href?: string
   type?: ButtonType
   className?: string
-}> = ({ children, href, type, className }) => (
+  pingName?: string
+  pingProps?: Record<string, string>
+}> = ({ children, href, type, className, pingName, pingProps }) => (
   <>
     {href ? (
       <Link href={href}>
         <a className={className}>
-          <InternalButton type={type || 'text'}>{children}</InternalButton>
+          <InternalButton
+            type={type || 'text'}
+            onClick={() => {
+              if (!pingName) return
+              ping(pingName, { props: pingProps })
+            }}
+          >
+            {children}
+          </InternalButton>
         </a>
       </Link>
     ) : (
-      <InternalButton type={type || 'text'} className={className}>
+      <InternalButton
+        type={type || 'text'}
+        className={className}
+        onClick={() => {
+          if (!pingName) return
+          ping(pingName, { props: pingProps })
+        }}
+      >
         {children}
       </InternalButton>
     )}
