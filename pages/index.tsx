@@ -2,8 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import { Hero, Footer } from '../components'
-import { HeaderContent } from '../comonents/header'
+import { Hero, Footer, HeaderContent } from '../components'
 
 const Home: NextPage = () => {
   return (

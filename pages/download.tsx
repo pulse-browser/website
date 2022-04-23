@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import { Nav, Button, Footer } from '../components'
+import { Nav, Button, Footer, HeaderContent } from '../components'
 import { Releases, releases } from '../data/releases'
-import { HeaderContent } from '../comonents/header'
 
 export async function getServerSideProps() {
   return {
