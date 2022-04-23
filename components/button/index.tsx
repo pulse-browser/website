@@ -57,7 +57,10 @@ export const Button: FC<{
             type={type || 'text'}
             onClick={() => {
               if (!pingName) return
-              ping(pingName, { props: pingProps })
+              const abortBypass = setInterval(() => {
+                ping(pingName, { props: pingProps })
+                clearInterval(abortBypass)
+              })
             }}
           >
             {children}
@@ -70,7 +73,10 @@ export const Button: FC<{
         className={className}
         onClick={() => {
           if (!pingName) return
-          ping(pingName, { props: pingProps })
+          const abortBypass = setInterval(() => {
+            ping(pingName, { props: pingProps })
+            clearInterval(abortBypass)
+          })
         }}
       >
         {children}
