@@ -55,12 +55,17 @@ export const Button: FC<{
         <a className={className}>
           <InternalButton
             type={type || 'text'}
-            onClick={() => {
+            onClick={(e) => {
               if (!pingName) return
-              const abortBypass = setInterval(() => {
-                ping(pingName, { props: pingProps })
-                clearInterval(abortBypass)
-              })
+
+              ping(pingName, { props: pingProps })
+
+              // Bodge, if we are going to navigate away, we have to delay the
+              // navigation to allow time for the ping to take into effect
+              if (href.startsWith('http')) {
+                e.preventDefault()
+                setTimeout(() => (location.href = href), 150)
+              }
             }}
           >
             {children}
@@ -73,10 +78,7 @@ export const Button: FC<{
         className={className}
         onClick={() => {
           if (!pingName) return
-          const abortBypass = setInterval(() => {
-            ping(pingName, { props: pingProps })
-            clearInterval(abortBypass)
-          })
+          ping(pingName, { props: pingProps })
         }}
       >
         {children}
