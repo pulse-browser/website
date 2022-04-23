@@ -8,112 +8,70 @@ export interface Binary {
   id: number
 }
 
+export interface Release {
+  binaries: Binary[]
+  releaseDate: string
+}
+
 export interface Releases {
-  alphaLoading: boolean
-  alpha?: {
-    binaries: Binary[]
-    releaseDate: Date
-  }
+  alpha?: Release
+  beta?: Release
+  stable?: Release
+}
 
-  betaLoading: boolean
-  beta?: {
-    binaries: Binary[]
-    releaseDate: Date
-  }
+function getReleasesOnBranch<T>(
+  ghReleases: { data: T[] },
+  branchName: string
+): T | undefined {
+  return ghReleases.data.find(
+    ({ target_commitish }: any) => target_commitish == branchName
+  )
+}
 
-  stableLoading: boolean
-  stable?: {
-    binaries: Binary[]
-    releaseDate: Date
+function getNewData(data: any): any {
+  return {
+    binaries: data.assets.map(
+      ({ name, browser_download_url, size, id }: any) => ({
+        name,
+        url: browser_download_url,
+        size,
+        id,
+      })
+    ),
+    releaseDate: new Date(data.published_at || '').toLocaleDateString(),
   }
 }
 
-export const useReleases = () => {
-  const [releases, setReleases] = useState<Releases>({
-    alphaLoading: true,
-    betaLoading: true,
-    stableLoading: true,
+export async function releases(): Promise<Releases> {
+  let releases: Releases = {}
+
+  const octokit = new Octokit({})
+
+  // Get all available releases
+  const ghReleases = await octokit.rest.repos.listReleases({
+    owner: 'pulse-browser',
+    repo: 'browser',
   })
 
-  useEffect(() => {
-    const octokit = new Octokit({})
+  // Grab alpha data and store it for later
+  const alpha = getReleasesOnBranch(ghReleases, 'alpha')
 
-    octokit.rest.repos
-      .listReleases({ owner: 'pulse-browser', repo: 'browser' })
-      .then((ghReleses) => {
-        const alpha = ghReleses.data.find(
-          ({ prerelease, target_commitish }) =>
-            prerelease && target_commitish == 'alpha'
-        )
+  if (alpha) {
+    releases.alpha = getNewData(alpha)
+  }
 
-        setReleases((releases) => ({ ...releases, alphaLoading: false }))
+  // Grab beta data and store it for later
+  const beta = getReleasesOnBranch(ghReleases, 'beta')
 
-        if (alpha) {
-          setReleases((releases) => ({
-            ...releases,
-            alpha: {
-              binaries: alpha.assets.map(
-                ({ name, browser_download_url, size, id }) => ({
-                  name,
-                  url: browser_download_url,
-                  size,
-                  id,
-                })
-              ),
-              releaseDate: new Date(alpha.published_at || ''),
-            },
-          }))
-        }
+  if (beta) {
+    releases.beta = getNewData(beta)
+  }
 
-        const beta = ghReleses.data.find(
-          ({ prerelease, target_commitish }) =>
-            prerelease && target_commitish == 'beta'
-        )
+  const stable = getReleasesOnBranch(ghReleases, 'stable')
 
-        setReleases((releases) => ({ ...releases, betaLoading: false }))
-
-        if (beta) {
-          setReleases((releases) => ({
-            ...releases,
-            beta: {
-              binaries: beta.assets.map(
-                ({ name, browser_download_url, size, id }) => ({
-                  name,
-                  url: browser_download_url,
-                  size,
-                  id,
-                })
-              ),
-              releaseDate: new Date(beta.published_at || ''),
-            },
-          }))
-        }
-
-        const stable = ghReleses.data.find(
-          ({ prerelease, target_commitish }) =>
-            prerelease && target_commitish == 'stable'
-        )
-
-        setReleases((releases) => ({ ...releases, stableLoading: false }))
-
-        if (stable) {
-          setReleases((releases) => ({
-            ...releases,
-            stable: {
-              binaries: stable.assets.map(
-                ({ name, browser_download_url, size, id }) => ({
-                  name,
-                  url: browser_download_url,
-                  size,
-                  id,
-                })
-              ),
-              releaseDate: new Date(stable.published_at || ''),
-            },
-          }))
-        }
-      })
-  }, [])
+  if (stable) {
+    releases.stable = getNewData(stable)
+  }
 
   return releases
 }

@@ -1,14 +1,18 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import { Nav, Button, Footer } from '../components'
-import { useReleases } from '../data/releases'
+import { Releases, releases } from '../data/releases'
 
-const Downloads: NextPage = () => {
-  const releases = useReleases()
-  console.log(releases)
+export async function getServerSideProps() {
+  return {
+    props: {
+      releases: await releases(),
+    },
+  }
+}
 
+const Downloads = ({ releases }: { releases: Releases }) => {
   return (
     <div className="container m-auto">
       <Head>
@@ -27,8 +31,12 @@ const Downloads: NextPage = () => {
         />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="/assets/promotional-embed.png" />
-        
-        <script defer data-domain="pulsebrowser.app" src="https://analytics.fyralabs.com/js/plausible.js"></script>
+
+        <script
+          defer
+          data-domain="pulsebrowser.app"
+          src="https://analytics.fyralabs.com/js/plausible.js"
+        ></script>
       </Head>
 
       <Nav />
@@ -47,16 +55,11 @@ const Downloads: NextPage = () => {
               <div className="text-gray-700 mt-4">
                 Get the latest features at the with less stability and polish
               </div>
-              <div>
-                Released on:{' '}
-                {releases.alpha?.releaseDate.toLocaleDateString() || 'none'}
-              </div>
+              <div>Released on: {releases.alpha?.releaseDate || 'none'}</div>
             </div>
           </div>
           <div className="">
-            {releases.alphaLoading ? (
-              <p>Loading...</p>
-            ) : releases.alpha ? (
+            {releases.alpha ? (
               <>
                 {releases.alpha.binaries.map((release) => (
                   <Button
@@ -84,19 +87,14 @@ const Downloads: NextPage = () => {
             <div>
               <h2 className="text-1xl font-bold">Beta builds</h2>
               <div className="text-gray-700 mt-4">
-                Get slightly more stable and pollished builds but still with a
+                Get slightly more stable and polished builds but still with a
                 risk of crashes
               </div>
-              <div>
-                Released on:{' '}
-                {releases.beta?.releaseDate.toLocaleDateString() || 'none'}
-              </div>
+              <div>Released on: {releases.beta?.releaseDate || 'none'}</div>
             </div>
           </div>
           <div>
-            {releases.betaLoading ? (
-              <p>Loading...</p>
-            ) : releases.beta ? (
+            {releases.beta ? (
               <>
                 {releases.beta.binaries.map((release) => (
                   <Button
@@ -126,16 +124,11 @@ const Downloads: NextPage = () => {
               <div className="text-gray-700 mt-4">
                 Stable builds with more features than firefox
               </div>
-              <div>
-                Released on:{' '}
-                {releases.stable?.releaseDate.toLocaleDateString() || 'none'}
-              </div>
+              <div>Released on: {releases.stable?.releaseDate || 'none'}</div>
             </div>
           </div>
           <div>
-            {releases.stableLoading ? (
-              <p>Loading...</p>
-            ) : releases.stable ? (
+            {releases.stable ? (
               <>
                 {releases.stable.binaries.map((release) => (
                   <Button
