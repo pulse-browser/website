@@ -4,7 +4,20 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Nav, Button, Footer, HeaderContent } from '../components'
 import { Releases, releases } from '../data/releases'
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ req, res }) {
+  // Vercel will serve a cached page for half a day.
+  //
+  // If the page is 3 days old, it will reevaluate in 
+  // the background, but still serve the user a cached
+  // page for speed.
+  //
+  // This is primarily to improve webpage performance
+  // so long as we retain two visitors per day.
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=720, stale-while-revalidate=4320'
+  )
+  
   return {
     props: {
       releases: await releases(),
