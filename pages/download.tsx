@@ -1,10 +1,11 @@
+import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import { Nav, Button, Footer, HeaderContent } from '../components'
 import { Releases, releases } from '../data/releases'
 
-export async function getServerSideProps({ req, res }) {
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   // Vercel will serve a cached page for half a day.
   //
   // If the page is 3 days old, it will reevaluate in 
