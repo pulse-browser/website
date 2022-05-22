@@ -30,10 +30,10 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <div id="features" className="container text-center m-auto p-16">
+      <div id="features" className="container text-center m-auto p-8 md:p-24">
         <h2 className="font-bold text-4xl mb-8">Features</h2>
 
-        <div className="grid grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
           <div className="p-8 flex items-center">
             <div>
               <h3 className="text-4xl pr-4">🛡️</h3>
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div id="themes" className="container text-center m-auto p-32">
+      <div id="themes" className="container text-center m-auto p-8 md:p-24">
         <h2 className="font-bold text-4xl mb-8">Themes</h2>
         <p className="text-lg font-normal">
           Pulse Browser supports theming via addons to let users freely modify
@@ -111,9 +111,9 @@ const Home: NextPage = () => {
         <p className="font-bold">We all love personalization. 🎨</p>
       </div>
 
-      <div id="goals" className="container text-center m-auto p-32">
+      <div id="goals" className="container text-center m-auto p-8 md:p-24">
         <h2 className="font-bold text-4xl mb-8">Our Goals</h2>
-        <div className="grid grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
           <div className="p-8 flex items-center">
             <div>
               <h3 className="text-4xl pr-4">

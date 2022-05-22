@@ -8,7 +8,7 @@ import { Releases, releases } from '../data/releases'
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   // Vercel will serve a cached page for half a day.
   //
-  // If the page is 3 days old, it will reevaluate in 
+  // If the page is 3 days old, it will reevaluate in
   // the background, but still serve the user a cached
   // page for speed.
   //
@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     'Cache-Control',
     'public, s-maxage=720, stale-while-revalidate=4320'
   )
-  
+
   return {
     props: {
       releases: await releases(),
@@ -52,7 +52,7 @@ const Downloads = ({ releases }: { releases: Releases }) => {
       <div className="p-4">
         <h1 className="text-4xl font-bold m-2">Downloads</h1>
 
-        <div className="bg-gray-100 flex p-4 m-4 justify-between outline outline-offset-2 outline-gray-600">
+        <div className="bg-gray-100 md:flex p-4 m-4 justify-between outline outline-offset-2 outline-gray-600">
           <div className="inline-flex">
             <img
               src="https://raw.githubusercontent.com/pulse-browser/assets/main/alpha/pulse-alpha.png"
@@ -60,10 +60,12 @@ const Downloads = ({ releases }: { releases: Releases }) => {
             />
             <div>
               <h2 className="text-1xl font-bold">Alpha builds</h2>
-              <div className="text-gray-700 mt-4">
+              <div className="text-gray-700 md:mt-4">
                 Get the latest features at the with less stability and polish
               </div>
-              <div>Released on: {releases.alpha?.releaseDate || 'none'}</div>
+              <div className="text-gray-500">
+                Released on: {releases.alpha?.releaseDate || 'none'}
+              </div>
             </div>
           </div>
           <div className="">
@@ -88,7 +90,7 @@ const Downloads = ({ releases }: { releases: Releases }) => {
           </div>
         </div>
 
-        <div className="bg-gray-100 flex p-4 m-4 justify-between">
+        <div className="bg-gray-100 md:flex p-4 m-4 justify-between">
           <div className="inline-flex">
             <img
               src="https://raw.githubusercontent.com/pulse-browser/assets/main/beta/pulse-beta.png"
@@ -96,11 +98,13 @@ const Downloads = ({ releases }: { releases: Releases }) => {
             />
             <div>
               <h2 className="text-1xl font-bold">Beta builds</h2>
-              <div className="text-gray-700 mt-4">
+              <div className="text-gray-700 md:mt-4">
                 Get slightly more stable and polished builds but still with a
                 risk of crashes
               </div>
-              <div>Released on: {releases.beta?.releaseDate || 'none'}</div>
+              <div className="text-gray-500">
+                Released on: {releases.beta?.releaseDate || 'none'}
+              </div>
             </div>
           </div>
           <div>
@@ -125,7 +129,7 @@ const Downloads = ({ releases }: { releases: Releases }) => {
           </div>
         </div>
 
-        <div className="bg-gray-100 flex p-4 m-4 justify-between">
+        <div className="bg-gray-100 md:flex p-4 m-4 justify-between">
           <div className="inline-flex">
             <img
               src="https://raw.githubusercontent.com/pulse-browser/assets/main/stable/pulse-stable.png"
@@ -133,10 +137,12 @@ const Downloads = ({ releases }: { releases: Releases }) => {
             />
             <div>
               <h2 className="text-1xl font-bold">Stable builds</h2>
-              <div className="text-gray-700 mt-4">
+              <div className="text-gray-700 md:mt-4">
                 Stable builds with more features than firefox
               </div>
-              <div>Released on: {releases.stable?.releaseDate || 'none'}</div>
+              <div className="text-gray-500">
+                Released on: {releases.stable?.releaseDate || 'none'}
+              </div>
             </div>
           </div>
           <div>

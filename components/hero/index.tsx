@@ -9,10 +9,10 @@ import { Button, Nav } from '..'
 export const Hero = () => (
   <div className="bg-gray-100">
     <Nav />
-    <div className="grid grid-cols-2 items-center px-40 py-10">
+    <div className="md:grid grid-cols-2 items-center p-5 md:px-10 lg:px-40 py-10">
       <div className="flex justify-center">
-        <div className="text-left w-2/4">
-          <div className="text-7xl inline-flex py-12">
+        <div className="text-left w-full md:w-2/4">
+          <div className="text-5xl md:text-7xl inline-flex py-2 lg:py-12">
             <p className="font-bold">Pulse</p>
             <p className="font-light pl-2">Browser</p>
           </div>
@@ -33,8 +33,8 @@ export const Hero = () => (
       </div>
 
       <div className="relative z-0">
-        <img src="/assets/pulse-back.svg" className="w-3/4 h-1/4"></img>
-        <div className="w-3/4 absolute inset-0 z-10 flex justify-center items-center">
+        <img src="/assets/pulse-back.svg" className="md:w-3/4 h-1/4"></img>
+        <div className="md:w-3/4 absolute inset-0 z-10 flex justify-center items-center">
           <ReactCompareSlider
             itemOne={
               <ReactCompareSliderImage

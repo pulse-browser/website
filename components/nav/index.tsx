@@ -4,7 +4,7 @@ import { Button } from '..'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export const Nav = () => (
-  <nav className="p-8 place-content-center flow-root">
+  <nav className="flex p-2 lg:p-8 items-center justify-between">
     <div className="float-left">
       <Link href="/">
         <img
@@ -14,7 +14,7 @@ export const Nav = () => (
         />
       </Link>
     </div>
-    <div className=" float-right">
+    <div className="float-right">
       <Button type="text" href="https://discord.com/invite/xNkretH7sD">
         <i className="bi bi-discord"></i>
       </Button>

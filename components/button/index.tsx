@@ -26,7 +26,7 @@ const InternalButton: FC<{
         : ''
     } ${
       type == 'text'
-        ? 'border-gray-100 text-gray-700 px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-200'
+        ? 'border-gray-100 text-gray-700 px-4 py-2 transition duration-500 ease select-none hover:bg-gray-200'
         : ''
     } ${
       type == 'download'
@@ -34,7 +34,7 @@ const InternalButton: FC<{
         : ''
     } ${
       type == 'large-text'
-        ? 'border-gray-100 text-gray-700 px-6 py-4 m-2 transition duration-500 ease select-none hover:bg-gray-200'
+        ? 'border-gray-100 text-gray-700 px-6 py-4 transition duration-500 ease select-none hover:bg-gray-200'
         : ''
     } font-bold py-2 px-4 ${className}`}
   >
