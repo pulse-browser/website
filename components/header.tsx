@@ -6,8 +6,7 @@ export const HeaderContent = ({ path }: { path: string }) => (
     <script
       defer
       data-domain="pulsebrowser.app"
-      data-api="https://pa-pulse-browser.trickypr.workers.dev/pa/api/event"
-      src="https://pa-pulse-browser.trickypr.workers.dev/pa/js/script.js"
+      src="https://analytics.fyralabs.com/js/plausible.js"
     ></script>
   </>
 )
