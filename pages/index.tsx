@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Pulse Browser</title>
+        <title>Pulse Browser - A better Firefox fork</title>
         <meta
           name="description"
           content="An experimental Firefox fork that enhances focus and increases work productivity due to its hyper minimalistic UI and built-in tools."
