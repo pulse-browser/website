@@ -36,10 +36,10 @@ const Home: NextPage = () => {
         <div className="grid grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">🛡️</h1>
+              <h3 className="text-4xl pr-4">🛡️</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Removed telemetry</h1>
+              <h3 className="font-bold text-xl pb-2">Removed telemetry</h3>
               <p>
                 Noone but you should know what you are doing in your browser.
               </p>
@@ -47,10 +47,10 @@ const Home: NextPage = () => {
           </div>
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">🗡️</h1>
+              <h3 className="text-4xl pr-4">🗡️</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Goodbye spyware</h1>
+              <h3 className="font-bold text-xl pb-2">Goodbye spyware</h3>
               <p>
                 uBlock Origin, a wide spectrum blocker is included right inside
                 of the browser, blocking spyware on website
@@ -59,10 +59,10 @@ const Home: NextPage = () => {
           </div>
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">🍱</h1>
+              <h3 className="text-4xl pr-4">🍱</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Hello customisability</h1>
+              <h3 className="font-bold text-xl pb-2">Hello customisability</h3>
               <p>
                 Customise your interface with full browser themes, making it
                 just right for you
@@ -71,10 +71,10 @@ const Home: NextPage = () => {
           </div>
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">🍫</h1>
+              <h3 className="text-4xl pr-4">🍫</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Sidebars</h1>
+              <h3 className="font-bold text-xl pb-2">Sidebars</h3>
               <p>
                 To get quick access to all your tools right at the side of the
                 browser
@@ -83,19 +83,19 @@ const Home: NextPage = () => {
           </div>
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">💃</h1>
+              <h3 className="text-4xl pr-4">💃</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Emoji pickers</h1>
+              <h3 className="font-bold text-xl pb-2">Emoji pickers</h3>
               <p>The right emoji for the occasion is just two clicks away</p>
             </div>
           </div>
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">🦊</h1>
+              <h3 className="text-4xl pr-4">🦊</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Firefox based</h1>
+              <h3 className="font-bold text-xl pb-2">Firefox based</h3>
               <p>Built on a fast, efficient, core</p>
             </div>
           </div>
@@ -116,12 +116,12 @@ const Home: NextPage = () => {
         <div className="grid grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">
+              <h3 className="text-4xl pr-4">
                 <i className="bi bi-menu-button-fill"></i>
-              </h1>
+              </h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Minimalist UI</h1>
+              <h3 className="font-bold text-xl pb-2">Minimalist UI</h3>
               <p>
                 Minimalist ui that feels more native than firefox's (custom
                 skin, not a rewrite)
@@ -131,12 +131,12 @@ const Home: NextPage = () => {
 
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">🤔</h1>
+              <h3 className="text-4xl pr-4">🤔</h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">
+              <h3 className="font-bold text-xl pb-2">
                 Open-Source Alternatives
-              </h1>
+              </h3>
               <p>
                 Replace some internal firefox components with better open source
                 alternatives (e.g. uBlock origin)
@@ -146,12 +146,12 @@ const Home: NextPage = () => {
 
           <div className="p-8 flex items-center">
             <div>
-              <h1 className="text-4xl pr-4">
+              <h3 className="text-4xl pr-4">
                 <i className="bi bi-eraser-fill"></i>
-              </h1>
+              </h3>
             </div>
             <div className="flex-shrink">
-              <h1 className="font-bold text-xl pb-2">Telemetry</h1>
+              <h3 className="font-bold text-xl pb-2">Telemetry</h3>
               <p>Remove mozilla's telemetry, ads and pocket</p>
             </div>
           </div>
