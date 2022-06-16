@@ -12,10 +12,10 @@ export const Hero = () => (
     <div className="md:grid grid-cols-2 items-center p-5 md:px-10 lg:px-40 py-10">
       <div className="flex justify-center">
         <div className="text-left w-full md:w-2/4">
-          <div className="text-5xl md:text-7xl inline-flex py-2 lg:py-12">
+          <h1 className="text-5xl md:text-7xl inline-flex py-2 lg:py-12">
             <p className="font-bold">Pulse</p>
             <p className="font-light pl-2">Browser</p>
-          </div>
+          </h1>
 
           <p className="text-lg font-normal">
             An experimental Firefox fork that enhances focus and increases work
