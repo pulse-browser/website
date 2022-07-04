@@ -7,7 +7,10 @@ declare namespace window {
 
 // We need to wrap the ping function to stop it trying to call on the server
 // during the rendering process
-export const ping = () => {}
+export const ping = (
+  name: string,
+  options?: { props?: Record<string, string> }
+) => {}
 // export const ping =
 //   typeof window !== 'undefined'
 //     ? window.plausible ||
