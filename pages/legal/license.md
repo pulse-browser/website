@@ -1,8 +1,8 @@
 ---
 title: License
-content: "    "
-
+content: ''
 ---
+
 ```
 Mozilla Public License Version 2.0
 ==================================
