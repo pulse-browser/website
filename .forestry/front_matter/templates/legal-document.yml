@@ -16,3 +16,5 @@ fields:
     schema:
       format: markdown
   label: Content
+pages:
+- pages/legal/privacy-policy.md
