@@ -1,4 +1,18 @@
 ---
 label: Legal Document
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Content
