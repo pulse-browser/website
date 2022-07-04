@@ -17,4 +17,5 @@ fields:
       format: markdown
   label: Content
 pages:
+- pages/legal/license.md
 - pages/legal/privacy-policy.md
