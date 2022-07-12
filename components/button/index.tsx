@@ -13,6 +13,7 @@ const InternalButton: FC<{
   type: ButtonType
   className?: string
   onClick?: MouseEventHandler<HTMLButtonElement>
+  children?: React.ReactNode
 }> = ({ children, type, className, onClick }) => (
   <button
     onClick={onClick}
@@ -48,6 +49,7 @@ export const Button: FC<{
   className?: string
   pingName?: string
   pingProps?: Record<string, string>
+  children?: React.ReactNode
 }> = ({ children, href, type, className, pingName, pingProps }) => (
   <>
     {href ? (
