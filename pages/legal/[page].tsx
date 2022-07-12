@@ -1,8 +1,9 @@
 import { readdirSync, readFileSync } from 'fs'
 import MarkdownIt from 'markdown-it'
+import Head from 'next/head'
 import Link from 'next/link'
 import { parse } from 'yaml'
-import { Footer, Nav } from '../../components'
+import { Footer, HeaderContent, Nav } from '../../components'
 
 function Page({
   content,
@@ -15,8 +16,15 @@ function Page({
   page: string
   pages: string[]
 }) {
+  console.log(title)
   return (
     <div className="container m-auto">
+      <Head>
+        <title>{title} | Pulse Browser</title>
+
+        <HeaderContent path={page} />
+      </Head>
+
       <Nav />
 
       <div className="flex">
