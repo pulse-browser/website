@@ -4,9 +4,6 @@ const nextConfig = {
   images: {
     domains: ['raw.githubusercontent.com'],
   },
-  experimental: {
-    runtime: 'experimental-edge',
-  },
 }
 
 module.exports = nextConfig
