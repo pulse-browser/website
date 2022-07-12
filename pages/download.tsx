@@ -173,8 +173,4 @@ const Downloads = ({ releases }: { releases: Releases }) => {
   )
 }
 
-export const config = {
-  runtime: 'experimental-edge',
-}
-
 export default Downloads
