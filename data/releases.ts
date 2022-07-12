@@ -30,14 +30,14 @@ function getReleasesOnBranch<T>(
 
 function getNewData(data: any): any {
   return {
-    binaries: data.assets.map(
-      ({ name, browser_download_url, size, id }: any) => ({
+    binaries: data.assets
+      .map(({ name, browser_download_url, size, id }: any) => ({
         name,
         url: browser_download_url,
         size,
         id,
-      })
-    ),
+      }))
+      .filter(({ name }: any) => !name.includes('.mar')),
     releaseDate: new Date(data.published_at || '').toLocaleDateString(),
   }
 }
