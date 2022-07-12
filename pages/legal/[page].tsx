@@ -16,7 +16,6 @@ function Page({
   page: string
   pages: string[]
 }) {
-  console.log(title)
   return (
     <div className="container m-auto">
       <Head>
