@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             <div className="flex-shrink">
               <h3 className="font-bold text-xl pb-2">Removed telemetry</h3>
               <p>
-                Noone but you should know what you are doing in your browser.
+                No one but you should know what you are doing in your browser.
               </p>
             </div>
           </div>
