@@ -53,7 +53,7 @@ const Home: NextPage = () => {
               <h3 className="font-bold text-xl pb-2">Goodbye spyware</h3>
               <p>
                 uBlock Origin, a wide spectrum blocker is included right inside
-                of the browser, blocking spyware on website
+                of the browser, blocking spyware on websites
               </p>
             </div>
           </div>
