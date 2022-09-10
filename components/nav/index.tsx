@@ -1,17 +1,23 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { Button } from '..'
+import logo from '../../public/assets/pulse-logo.png'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export const Nav = () => (
   <nav className="flex p-2 lg:p-8 items-center justify-between">
     <div className="float-left">
       <Link href="/">
-        <img
-          src="https://raw.githubusercontent.com/pulse-browser/assets/main/pulse-logo.png"
-          alt="Pulse Logo"
-          className="h-16"
-        />
+        <a>
+          <Image
+            src={logo}
+            alt="Pulse Logo"
+            width={64}
+            height={64}
+            layout="fixed"
+          />
+        </a>
       </Link>
     </div>
     <div className="float-right">

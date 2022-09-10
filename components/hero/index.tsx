@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
@@ -5,6 +6,9 @@ import {
 } from 'react-compare-slider'
 
 import { Button, Nav } from '..'
+
+import darkCompare from '../../public/assets/dark.png'
+import lightCompare from '../../public/assets/light.png'
 
 export const Hero = () => (
   <div className="bg-gray-100">
@@ -36,20 +40,8 @@ export const Hero = () => (
         <img src="/assets/pulse-back.svg" className="md:w-3/4 h-1/4"></img>
         <div className="md:w-3/4 absolute inset-0 z-10 flex justify-center items-center">
           <ReactCompareSlider
-            itemOne={
-              <ReactCompareSliderImage
-                src="/assets/dark.png"
-                srcSet="/assets/dark.png"
-                alt="Image one"
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                src="/assets/light.png"
-                srcSet="/assets/light.png"
-                alt="Image two"
-              />
-            }
+            itemOne={<Image src={darkCompare} alt="Pulse Dark" />}
+            itemTwo={<Image src={lightCompare} alt="Pulse Light" />}
             handle={
               <ReactCompareSliderHandle
                 buttonStyle={{
