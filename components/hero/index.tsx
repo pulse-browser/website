@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import {
   ReactCompareSlider,
-  ReactCompareSliderImage,
   ReactCompareSliderHandle,
 } from 'react-compare-slider'
 
@@ -9,6 +8,7 @@ import { Button, Nav } from '..'
 
 import darkCompare from '../../public/assets/dark.png'
 import lightCompare from '../../public/assets/light.png'
+import download from '../../public/assets/downloads.svg'
 
 export const Hero = () => (
   <div className="bg-gray-100">
@@ -27,7 +27,14 @@ export const Hero = () => (
           </p>
           <div className="pt-8">
             <Button href="/download" type="download">
-              <i className="bi bi-download"></i> Download Pulse Browser
+              <Image
+                src={download}
+                alt="Download icon"
+                layout="fixed"
+                width={16}
+                height={16}
+              />{' '}
+              Download
             </Button>
             <Button href="#features" type="large-text">
               Learn More
