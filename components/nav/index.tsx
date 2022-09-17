@@ -24,11 +24,11 @@ export const Nav = () => (
     </div>
     <div className="float-right">
       <Button type="text" href="https://discord.com/invite/xNkretH7sD">
-        <Image src={githubLogo} layout="fixed" width={16} height={16} />
+        <Image src={discord} alt="Discord Logo" layout="fixed" width={16} height={16} />
       </Button>
       <Button type="text" href="https://github.com/pulse-browser/browser">
         <Image
-          src={discord}
+          src={githubLogo}
           alt="GitHub Logo"
           layout="fixed"
           width={16}
