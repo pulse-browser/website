@@ -61,7 +61,7 @@ const Downloads = ({ releases }: { releases: Releases }) => {
             <div>
               <h2 className="text-1xl font-bold">Alpha builds</h2>
               <div className="text-gray-700 md:mt-4">
-                Get the latest features at the with less stability and polish
+                Get the latest features with less stability and polish
               </div>
               <div className="text-gray-500">
                 Released on: {releases.alpha?.releaseDate || 'none'}
