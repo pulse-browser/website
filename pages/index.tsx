@@ -158,7 +158,6 @@ const Home: NextPage = () => {
       </div>
 
       <Footer />
-      <script>feather.replace()</script>
     </div>
   )
 }
