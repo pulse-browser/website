@@ -29,6 +29,56 @@ const Home: NextPage = () => {
 
       <Hero />
 
+      <div id="features" className="container text-center m-auto p-8 md:p-24">
+        <h2 className="font-bold text-4xl mb-8">Features</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
+          <div className="p-8 flex items-center">
+            <div>
+              <h3 className="text-4xl pr-4">🍫</h3>
+            </div>
+            <div className="flex-shrink">
+              <h3 className="font-bold text-xl pb-2">Sidebars</h3>
+              <p>
+                To get quick access to all your tools right at the side of the
+                browser
+              </p>
+            </div>
+          </div>
+          <div className="p-8 flex items-center">
+            <div>
+              <h3 className="text-4xl pr-4">🗡️</h3>
+            </div>
+            <div className="flex-shrink">
+              <h3 className="font-bold text-xl pb-2">Goodbye spyware</h3>
+              <p>
+                uBlock Origin, a wide spectrum blocker is included right inside
+                of the browser, blocking spyware on websites
+              </p>
+            </div>
+          </div>
+          <div className="p-8 flex items-center">
+            <div>
+              <h3 className="text-4xl pr-4">🍱</h3>
+            </div>
+            <div className="flex-shrink">
+              <h3 className="font-bold text-xl pb-2">Hello customisability</h3>
+              <p>
+                Customize your interface with full browser themes, making it
+                just right for you
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className='text-left max-w-3xl'>
+          <h2 className='font-bold text-4xl mb-8'>Looking for new features</h2>
+          <p>
+            This is currently a combination of a tech demo and the browser that we want to daily drive. If you have ideas for what you want to see in the browser, we encourage you to let us know on <a href='https://github.com/pulse-browser/browser/discussions/categories/ideas' className='text-blue-800 underline cursor-pointer'>GitHub</a>.
+          </p>
+        </div>
+      </div>
+
       {/* <div id="features" className="container text-center m-auto p-8 md:p-24">
         <h2 className="font-bold text-4xl mb-8">Features</h2>
 
