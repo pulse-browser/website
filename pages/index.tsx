@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <div id="features" className="container text-center m-auto p-8 md:p-24">
+      {/* <div id="features" className="container text-center m-auto p-8 md:p-24">
         <h2 className="font-bold text-4xl mb-8">Features</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
@@ -155,7 +155,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </div>
