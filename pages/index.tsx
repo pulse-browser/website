@@ -5,7 +5,7 @@ import { Hero, Footer, HeaderContent } from '../components'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="bg-pulse-grey-900 text-pulse-grey-100">
       <Head>
         <title>Pulse Browser - A better Firefox fork</title>
         <meta
@@ -29,7 +29,10 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <div id="features" className="container text-center m-auto p-8 md:p-24">
+      <div
+        id="features"
+        className="container text-center m-auto p-8 md:p-24 text-pulse-grey-100"
+      >
         <h2 className="font-bold text-4xl mb-8">Features</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-4 place-items-stretch text-left">
@@ -71,10 +74,19 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className='text-left max-w-3xl'>
-          <h2 className='font-bold text-4xl mb-8'>Looking for new features</h2>
+        <div className="text-left max-w-3xl">
+          <h2 className="font-bold text-4xl mb-8">Looking for new features</h2>
           <p>
-            This is currently a combination of a tech demo and the browser that we want to daily drive. If you have ideas for what you want to see in the browser, we encourage you to let us know on <a href='https://github.com/pulse-browser/browser/discussions/categories/ideas' className='text-blue-800 underline cursor-pointer'>GitHub</a>.
+            This is currently a combination of a tech demo and the browser that
+            we want to daily drive. If you have ideas for what you want to see
+            in the browser, we encourage you to let us know on{' '}
+            <a
+              href="https://github.com/pulse-browser/browser/discussions/categories/ideas"
+              className="text-pulse-secondary-200 underline cursor-pointer"
+            >
+              GitHub
+            </a>
+            .
           </p>
         </div>
       </div>

@@ -2,12 +2,7 @@ import Link from 'next/link'
 import { FC, MouseEventHandler } from 'react'
 import { ping } from '../../data/ping'
 
-type ButtonType =
-  | 'primary'
-  | 'toned-secondary'
-  | 'text'
-  | 'download'
-  | 'large-text'
+type ButtonType = 'primary' | 'toned-secondary' | 'text' | 'large-text'
 
 const InternalButton: FC<{
   type: ButtonType
@@ -19,25 +14,21 @@ const InternalButton: FC<{
     onClick={onClick}
     className={`${
       type == 'primary'
-        ? 'bg-blue-600 transition duration-500 hover:bg-blue-800 text-white'
+        ? 'bg-pulse-primary-500 bg-opacity-30 transition duration-500 hover:bg-opacity-50 text-pulse-primary-100'
         : ''
     } ${
       type == 'toned-secondary'
-        ? 'bg-indigo-100 transition duration-500 hover:bg-indigo-200'
+        ? 'bg-pulse-secondary-400 bg-opacity-30 transition duration-500 hover:bg-opacity-50 text-pulse-secondary-100'
         : ''
     } ${
       type == 'text'
-        ? 'border-gray-100 text-gray-700 px-4 py-2 transition duration-500 ease select-none hover:bg-gray-200'
-        : ''
-    } ${
-      type == 'download'
-        ? 'bg-blue-600  hover:bg-blue-800 text-white px-6 py-4 shadow-md hover:outline outline-offset-2 outline-blue-600 transition duration-500'
+        ? 'text-gray-100 px-4 py-2 transition duration-500 ease select-none hover:bg-gray-200'
         : ''
     } ${
       type == 'large-text'
         ? 'border-gray-100 text-gray-700 px-6 py-4 transition duration-500 ease select-none hover:bg-gray-200'
         : ''
-    } font-bold py-2 px-4 ${className}`}
+    } font-bold py-2 px-4 rounded-lg ${className}`}
   >
     {children}
   </button>

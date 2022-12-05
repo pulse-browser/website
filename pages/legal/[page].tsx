@@ -26,19 +26,19 @@ function Page({
 
       <Nav />
 
-      <div className="flex">
-        <div className="w-80 p-4">
+      <div className="md:flex">
+        <div className="min-w-max p-4">
           {pages.map((page) => (
             <Link key={page} href={page}>
-              <div
-                className={` hover:bg-gray-200 py-2 px-4 capitalize cursor-pointer`}
+              <a
+                className={`block hover:bg-pulse-grey-800 transition border-lg py-2 px-4 capitalize cursor-pointer`}
               >
                 {page.replace('/legal/', '').replace('-', ' ')}
-              </div>
+              </a>
             </Link>
           ))}
         </div>
-        <div className="max-w-4xl">
+        <div className="p-4 md:p-0 max-w-4xl">
           <h1 className="text-6xl pb-8 font-bold">{title}</h1>
           <div
             dangerouslySetInnerHTML={{
@@ -48,7 +48,7 @@ function Page({
                 .replaceAll('<ul>', '<ul class="list-disc pl-5">')
                 .replaceAll(
                   '<a',
-                  '<a class="text-blue-800 underline underline-offset-2" '
+                  '<a class="text-pulse-secondary-200 underline underline-offset-2" '
                 )
                 .replaceAll('<p>', '<p class="pb-4 leading-relaxed">'),
             }}

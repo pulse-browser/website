@@ -11,12 +11,12 @@ import lightCompare from '../../public/assets/light.png'
 import download from '../../public/assets/downloads.svg'
 
 export const Hero = () => (
-  <div className="bg-gray-100">
+  <div className="bg-pulse-grey-850 text-pulse-grey-100">
     <Nav />
-    <div className="md:grid grid-cols-2 items-center p-5 md:px-10 lg:px-40 py-10">
+    <div className="md:grid grid-cols-2 items-center p-5 lg:px-20 py-10">
       <div className="flex justify-center">
-        <div className="text-left w-full md:w-2/4">
-          <h1 className="text-5xl md:text-7xl inline-flex py-2 lg:py-12">
+        <div className="text-left w-full lg:w-2/4">
+          <h1 className="block text-5xl md:text-7xl inline-flex py-2 lg:py-12">
             <p className="font-bold">Pulse</p>
             <p className="font-light pl-2">Browser</p>
           </h1>
@@ -26,7 +26,7 @@ export const Hero = () => (
             productivity due to its hyper minimalistic UI and built-in tools.
           </p>
           <div className="pt-8">
-            <Button href="/download" type="download">
+            <Button href="/download" type="primary">
               <Image
                 src={download}
                 alt="Download icon"
@@ -36,14 +36,14 @@ export const Hero = () => (
               />{' '}
               Download
             </Button>
-            <Button href="#features" type="large-text">
+            <Button href="#features" type="text">
               Learn More
             </Button>
           </div>
         </div>
       </div>
 
-      <div className="relative z-0">
+      <div className="mt-16 md:mt-0 relative z-0">
         <img src="/assets/pulse-back.svg" className="md:w-3/4 h-1/4"></img>
         <div className="md:w-3/4 absolute inset-0 z-10 flex justify-center items-center">
           <ReactCompareSlider
@@ -66,10 +66,6 @@ export const Hero = () => (
           />
         </div>
       </div>
-    </div>
-
-    <div className="relative">
-      <div className="w-full border-t border-gray-300"></div>
     </div>
   </div>
 )

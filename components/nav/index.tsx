@@ -22,9 +22,15 @@ export const Nav = () => (
         </a>
       </Link>
     </div>
-    <div className="float-right">
+    <div className="float-right text-pulse-grey-100">
       <Button type="text" href="https://discord.com/invite/xNkretH7sD">
-        <Image src={discord} alt="Discord Logo" layout="fixed" width={16} height={16} />
+        <Image
+          src={discord}
+          alt="Discord Logo"
+          layout="fixed"
+          width={16}
+          height={16}
+        />
       </Button>
       <Button type="text" href="https://github.com/pulse-browser/browser">
         <Image
@@ -33,6 +39,7 @@ export const Nav = () => (
           layout="fixed"
           width={16}
           height={16}
+          className="invert"
         />
       </Button>
       <Button type="primary" href="/download">
