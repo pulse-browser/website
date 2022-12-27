@@ -11,7 +11,7 @@ A copy of the Australian Privacy Principles may be obtained from the website of 
 
 ## What is Personal Information and why do we collect it?
 
-Personal Information is information or an opinion that identifies an individual. Examples of Personal Information we collect include: names, addresses, email addresses, phone and facsimile numbers.
+Personal Information is information or an opinion that identifies an individual. Some examples of personal information include: names, addresses, email addresses, phone and facsimile numbers. We do not collect this information unless stated below.
 
 We try to avoid collecting personal personal information where possible. Currently, there is no information we collect.
 
